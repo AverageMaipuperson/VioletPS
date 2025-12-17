@@ -1,3 +1,4 @@
+// NOTE: this file is abandoned, the declarations for ExtraLayer are in epic.cpp (for no reason)
 #include "FLAlertLayer.hpp"
 #include "CCMenuItemToggler.hpp"
 #include "CCMenuItemSpriteExtra.hpp"
@@ -43,4 +44,5 @@ auto win_size = CCDirector::sharedDirector()->getWinSize();
 
 void EditorConfigurationsLayer::keyBackClicked() {
     onClose(nullptr);
+
 }
