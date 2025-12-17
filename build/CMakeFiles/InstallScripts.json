@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/Luciano/Downloads/cmake-4.1.2/cmake-4.1.2/project/build/cmake_install.cmake",
+		"C:/Users/Luciano/Downloads/cmake-4.1.2/cmake-4.1.2/project/build/vendor/Dobby/cmake_install.cmake",
+		"C:/Users/Luciano/Downloads/cmake-4.1.2/cmake-4.1.2/project/build/vendor/Dobby/external/logging/cmake_install.cmake",
+		"C:/Users/Luciano/Downloads/cmake-4.1.2/cmake-4.1.2/project/build/vendor/Dobby/builtin-plugin/SymbolResolver/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

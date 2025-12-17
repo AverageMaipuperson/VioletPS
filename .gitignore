@@ -1,5 +1,0 @@
-# ignored due to security concerns:
-src/CoderLayer.cpp
-src/VCustomEncrypt.cpp
-vendor/robtop/CoderLayer.hpp
-vendor/robtop/VCustomEncrypt.hpp

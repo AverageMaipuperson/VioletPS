@@ -1,0 +1,12 @@
+C:/Users/Luciano/Downloads/cmake-4.1.2/cmake-4.1.2/project/build/CMakeFiles/violet.dir
+C:/Users/Luciano/Downloads/cmake-4.1.2/cmake-4.1.2/project/build/CMakeFiles/edit_cache.dir
+C:/Users/Luciano/Downloads/cmake-4.1.2/cmake-4.1.2/project/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Luciano/Downloads/cmake-4.1.2/cmake-4.1.2/project/build/vendor/Dobby/CMakeFiles/dobby.dir
+C:/Users/Luciano/Downloads/cmake-4.1.2/cmake-4.1.2/project/build/vendor/Dobby/CMakeFiles/edit_cache.dir
+C:/Users/Luciano/Downloads/cmake-4.1.2/cmake-4.1.2/project/build/vendor/Dobby/CMakeFiles/rebuild_cache.dir
+C:/Users/Luciano/Downloads/cmake-4.1.2/cmake-4.1.2/project/build/vendor/Dobby/external/logging/CMakeFiles/logging.dir
+C:/Users/Luciano/Downloads/cmake-4.1.2/cmake-4.1.2/project/build/vendor/Dobby/external/logging/CMakeFiles/edit_cache.dir
+C:/Users/Luciano/Downloads/cmake-4.1.2/cmake-4.1.2/project/build/vendor/Dobby/external/logging/CMakeFiles/rebuild_cache.dir
+C:/Users/Luciano/Downloads/cmake-4.1.2/cmake-4.1.2/project/build/vendor/Dobby/builtin-plugin/SymbolResolver/CMakeFiles/symbol_resolver.dir
+C:/Users/Luciano/Downloads/cmake-4.1.2/cmake-4.1.2/project/build/vendor/Dobby/builtin-plugin/SymbolResolver/CMakeFiles/edit_cache.dir
+C:/Users/Luciano/Downloads/cmake-4.1.2/cmake-4.1.2/project/build/vendor/Dobby/builtin-plugin/SymbolResolver/CMakeFiles/rebuild_cache.dir

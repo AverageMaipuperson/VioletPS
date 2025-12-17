@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "../vendor/dlfcn-win32-1.4.2",
+                "../vendor/cocos/cocos2dx",
+                "../vendor/cocos/cocos2dx/include",
+                "../vendor/cocos/cocos2dx/platform",
+                "../vendor/cocos/cocos2dx/platform/win32",
+                "../vendor/cocos",
+                "C:/Users/Luciano/Downloads/cmake-4.1.2/cmake-4.1.2/project/vendor/cocos/js/spidermonkey-ios/system_wrappers_js",
+                "../vendor/pthread-win-master/include/",
+                "../vendor/cocos/cocos2dx/platform/ios",
+                "../vendor/cocos/js/spidermonkey-ios/system_wrappers_js",
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.26100.0",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}
