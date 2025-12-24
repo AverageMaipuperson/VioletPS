@@ -435,7 +435,7 @@ void CoderLayer::updateMainLabel() {
         cocos2d::CCUserDefault *def = cocos2d::CCUserDefault::sharedUserDefault();
         auto sharedengine = CocosDenshion::SimpleAudioEngine::sharedEngine();
         sharedengine->playEffect("highscoreGet02.ogg", false);
-        mainTitle->setString("It definitively is, i am one myself, in fact.");
+        mainTitle->setString("It definitely is, i am one myself, in fact.");
         mainTitle->setColor(ccc3(189, 97, 242));
         this->showStarAnimation(25);
         this->reward(6, 25);
@@ -465,7 +465,7 @@ bool CoderLayer::init(CCLayer* self) {
     code7 = def->getBoolForKey("code7", false);
     code8 = def->getBoolForKey("code8", false);
     code7 = def->getBoolForKey("code9", false);
-    code8 = def->getBoolForKey("code19", false);
+    code8 = def->getBoolForKey("code10", false);
     CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("highscoreGet02.ogg");
     auto director = CCDirector::sharedDirector();
     auto win_size = director->getWinSize();
@@ -507,23 +507,12 @@ bool CoderLayer::init(CCLayer* self) {
     // textInput->setAllowedChars("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,+-/!?");
     textInput->setAnchorPoint({0, 0.5});
    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("vaultAnimation-hd.plist");
-
-// Using a SpriteBatchNode is efficient but complex with buttons. 
-// For simplicity with buttons, we often use regular CCSprites added to the main layer.
-// If you MUST use a batch node, the button setup gets slightly more complex. 
-// Let's stick to simple CCSprites for the button example:
-
-// --- 2. Create the Animated Sprite (Normal State Visual) ---
-// This sprite will run the animation continuously in the background
 CCSprite* animatedSprite = CCSprite::createWithSpriteFrameName("vault001.png");
 
-// CRITICAL CHECK: Make sure the sprite loaded correctly
 if (animatedSprite == nullptr) {
     CCLOGERROR("Failed to create animatedSprite. Check plist/png files.");
     return false; 
 }
-
-// --- 3. Set up the Animation Action (Same as before) ---
 CCArray* animFrames = CCArray::arrayWithCapacity(4);
 char str[100] = {0};
 for (int i = 1; i <= 4; i++)
@@ -536,40 +525,24 @@ for (int i = 1; i <= 4; i++)
 CCAnimation* animation = CCAnimation::create(animFrames, 0.1f);
 CCAnimate* animate = CCAnimate::create(animation);
 CCActionInterval* repeatAction = CCRepeatForever::create(animate);
-
-// --- 4. Run the animation on the sprite ---
 animatedSprite->runAction(repeatAction);
-
-
-// --- 5. Create the Menu Item using the Animated Sprite ---
-// The menu item uses the animatedSprite as its visual representation (Normal State).
-// We pass NULL for the selected and disabled states for simplicity here.
-
 CCPoint desiredPosition = ccp(win_size.width / 2, win_size.height / 2 - 10);
 
 CCMenuItemSprite* vaultMenuItem = CCMenuItemSprite::create(
-    animatedSprite,  // Normal sprite (which is animating!)
-    NULL,            // Selected sprite (optional)
-    NULL,            // Disabled sprite (optional)
-    this,            // Target object (the layer)
-    menu_selector(CoderLayer::updateMainLabel) // Function to call when clicked
+    animatedSprite,
+    NULL,
+    NULL,
+    this,
+    menu_selector(CoderLayer::updateMainLabel)
 );
 
-// Optional: Position the menu item
 vaultMenuItem->setPosition(ccp(
     roundf(desiredPosition.x), 
     roundf(desiredPosition.y)
 ));
 vaultMenuItem->setScale(0.15f);
-
-
-// --- 6. Create the Menu Container ---
-// A CCMenu is required to make the menu items clickable.
 CCMenu* menu = CCMenu::create(vaultMenuItem, NULL);
-menu->setPosition(CCPointZero); // Position the menu itself at the bottom-left
-
-
-// --- 7. Add the Menu to your Layer ---
+menu->setPosition(CCPointZero);
 this->addChild(menu);
 
     

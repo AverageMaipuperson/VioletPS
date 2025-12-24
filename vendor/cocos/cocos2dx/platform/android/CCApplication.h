@@ -20,6 +20,8 @@ public:
     */
     void setAnimationInterval(double interval);
 
+	void openURL(const char*);
+
     typedef enum
     {
         /// Device oriented vertically, home button on the bottom

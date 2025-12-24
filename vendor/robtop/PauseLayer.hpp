@@ -8,4 +8,5 @@ public:
     static PauseLayer* create(void*);
 	virtual void FLAlert_Clicked(FLAlertLayer* self, bool btn2) override;
     void onOpenMenu();
+	void toggleVisibility();
 };

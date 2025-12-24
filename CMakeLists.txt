@@ -15,7 +15,14 @@ add_library(violet SHARED
 ./src/VCustomEncrypt.cpp
 ./src/NoclipOptionsLayer.cpp
 ./src/SpeedhackOptionsLayer.cpp
-./vendor/cpp-base64-2.rc.08/base64.cpp)
+./vendor/cpp-base64-2.rc.08/base64.cpp
+./src/KittyMemory/KittyMemory.cpp
+./src/KittyMemory/MemoryPatch.cpp
+./src/KittyMemory/KittyUtils.cpp
+./src/KittyMemory/MemoryBackup.cpp
+./src/HitboxLayer.cpp
+./src/HidePauseLayer.cpp
+)
 
 set(VENDOR_DIR ./vendor)
 
@@ -23,7 +30,7 @@ target_include_directories(violet PUBLIC vendor/cocos)
 
 target_include_directories(violet PUBLIC vendor/robtop)
 
-target_include_directories(violet PUBLIC vendor/KittyMemory/KittyMemory)
+target_include_directories(violet PUBLIC vendor/KittyMemory)
 
 target_include_directories(violet PUBLIC vendor/cocos/cocos2dx)
 

@@ -4,6 +4,13 @@
 #include <cocos2d.h>
 #include "GameObject.hpp"
 
+struct OrderingData
+{
+    int order_of_arrival;
+    int z_order;
+};
+
+
 class DrawGridLayer : public cocos2d::CCLayer
 {
 public:

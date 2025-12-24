@@ -2,10 +2,11 @@
 
 #include <cocos2d.h>
 #include "PlayerObject.hpp"
+#include "GJGameLevel.hpp"
 
 class PlayLayer : public cocos2d::CCLayer {
 public:
-    static PlayLayer* create(void*);
+    static PlayLayer* create(GJGameLevel*);
     bool init(void*);
 
     void resetLevel();

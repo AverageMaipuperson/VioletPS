@@ -18,6 +18,12 @@ namespace ExtraLayerInfo {
 		DEATHS,
 		FLASH,
 		PEE,
+		NRT,
+		HPM,
+		DA,
+		LL,
+		MEB,
+		DAT,
         UNKNOWN
     };
 }
@@ -30,6 +36,12 @@ public:
 	static float m_speedhack;
 	static bool m_speedhackEnabled;
 	static CCTextInputNode* m_speedHackInput;
+	static int m_currentPage;
+	static CCLayer* m_page1;
+	static CCLayer* m_page2;
+	static CCMenu* m_right;
+	static CCMenu* m_left;
+	static CCLayer* m_self;
     static ExtraLayer* create(CCLayer* referrer);
 	void onClose(CCObject*);
 	void dummy(CCObject* pSender);
@@ -45,14 +57,19 @@ public:
 	void showDEATHS();
 	void showFLASH();
 	void showPEE();
-	void showInfo(ExtraLayerInfo::InfoType type);
+	void showInfo(CCObject* sender);
 	static void incrementStat(GameStatsManager* self, char* type, int amount);
 	static int getStat(GameStatsManager* self, char* type);
 	static bool saveSettingsToFile();
 	static bool loadSettingFromFile(const char* settingname);
+	void toggle(CCObject* sender);
+	CCNode* optionToggler(const char* display, bool* toggleVar, bool addinfo = false, ExtraLayerInfo::InfoType type = ExtraLayerInfo::InfoType::UNKNOWN);
+	CCMenu* createOptionsMenu(const char* display, int length, SEL_MenuHandler func);
 	static void onLoadSettings();
 	void onNoclipOptions();
 	void onPEEOptions();
+	void switchPages();
+	void volumeSliderCallback(cocos2d::CCObject* pSender, cocos2d::extension::CCControlEvent controlEvent);
 protected:
     bool init(CCLayer* referrer);
     void keyBackClicked();

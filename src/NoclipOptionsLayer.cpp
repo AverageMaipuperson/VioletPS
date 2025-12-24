@@ -29,10 +29,6 @@ class ToggleHack {
     return nullptr;
 }
 
-void ExtraLayer::showDEATHS() {
-    showInfo(ExtraLayerInfo::InfoType::DEATHS);
-  }
-
 bool NoclipOptionsLayer::init(CCLayer* referrer) {
     if (!CCBlockLayer::init()) {
         return false;
@@ -111,7 +107,7 @@ auto deaths = ExtraLayer::m_deaths;
         auto labelMenuItem2 = CCMenuItemLabel::create(
     counterLabel2, 
     this, 
-    menu_selector(ExtraLayer::showDEATHS) 
+    menu_selector(ExtraLayer::dummy) 
 );
   DEATHSButton->setScale(0.8f);
   menu2->addChild(DEATHSButton);
@@ -142,7 +138,7 @@ auto flash = ExtraLayer::m_flash;
         auto labelMenuItem3 = CCMenuItemLabel::create(
     counterLabel3, 
     this, 
-    menu_selector(ExtraLayer::showFLASH) 
+    menu_selector(ExtraLayer::dummy) 
 );
   FLASHButton->setScale(0.8f);
   menu3->addChild(FLASHButton);
